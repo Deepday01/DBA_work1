@@ -1,0 +1,69 @@
+1.git으로 관리할 경로까지 이동
+
+2.초기화(.git 폴더 생성됨 - 숨겨져 있음)
+git init
+
+-> ls -al (숨겨진 파일확인)
+-> .git 폴더 삭제(rm -rf .git)
+
+~~코드 작업~~
+
+~~commit 전 사전작업~~
+
+3.브랜치 이름 기본값 변경하기(mater일때)
+git config --global init.defaultBranch main (초기값 변경)
+git branch -M main (현재 브랜치명 수정)
+# git bash 안쓰면 main이 안뜰수도 있음 그래서 git bash로 해야 편함
+
+4.git 상태확인
+git status
+
+7.commit 이전에 계정정보 등록(--global 옵션은 해당 컴퓨터 전체에 적용, global 하지 마쇼)
+git config --global user.name "your name"
+git config --global user.email you@example.com
+
+git config list 
+
+(삭제법)
+git contig --global --unset user.name
+git contig --global --unset user.email
+
+8.commit 정보 확인
+git log
+
+~~저장하고 싶다, commit 하고싶다!!~~
+
+5.git으로 관리하는 파일로 추가
+git add . (.은 현재 위치를 추가.)
+
+6.commit(해당 시점을 저장; 중요지점에서 저장하는 개념)
+git comit -m "커밋 메시지"
+
+9.(과제)
+project5/test1를 생성
+git으로 관리
+파일생성은 알아서... 최소 커밋의 수는 5번 이상 되도록 하세요.
+
+-----------------------------------------------------------------
+로컬 컴퓨터(코드있음)와 git hub사이트(비어있음) 연결
+1. remote 정보확인
+git remote
+git remote -V
+
+2.reomote
+git remote add origin https://github.com/Deepday01/DSAD_work1.git
+git push -u origin main
+
+3.삭제
+git remote rm 리모트이름
+git remote rm origin
+
+4. github 데이터 넣기
+git push -u origin main
+git push
+
+...강사님꺼...
+# https://github.com/shimseonjo/project5_work1
+
+---------------------------------------------------------------------------------------
+clone 하기
